@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+  color: #333;
+  }
+  
+  .calculator {
+    margin: 5vh;
+    width: 90VW;
+    background-color: #bbb6b6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.5s ease-out; /* Apply fade-in animation */
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  #history {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #000000; /* History text color */
+  }
+  
+  #display {
+    border-radius: 20px;
+    width: 98.6%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1.2em;
+  }
+  
+  .keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+  }
+  
+  
+  button {
+    padding: 10px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Light blue */
+    color: black;
+    font-weight: 700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #calculator-keys-scientific button {
+    background-color: #FF9800; /* Light orange */
+  }
+  
+  button:active {
+    background-color: #45a049;
+  }
+
+  .tools button{
+    color: white;
+    background-color: #333;
+    transition: transform 0.3s ease;
+  }
+  .tools button:hover {
+    transform: scale(1.02); /* Scale button on hover */
+  }
+
+  button i {
+    margin-right: 5px;
+  }
+  
+  /* Simple fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  #calculator-keys-basic button:hover {
+    background-color: #45a049; /* Lighter shade on hover */
+  }
+  #calculator-keys-scientific button:hover {
+    background-color: #df9020; /* Light orange */
+  }

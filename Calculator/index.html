@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css">
+  <title>Calculator</title>
+</head>
+
+<body>
+  <div class="calculator">
+    <h1>Calculator <i class="fas fa-calculator"></i></h1>
+    <br>
+    <div id="history"></div>
+    <input type="text" id="display" readonly>
+    <br>
+    <br>
+    <div class="keys" id="calculator-keys-basic">
+      <!-- Basic Calculations -->
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button onclick="appendToDisplay('+')">+</button>
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button onclick="appendToDisplay('-')">-</button>
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button onclick="appendToDisplay('*')">×</button>
+      <button onclick="appendToDisplay('0')">0</button>
+      <button onclick="decimal()">.</button>
+      <button onclick="appendToDisplay('/')">/</button>
+      <button onclick="percentage()">%</button>
+      <br>
+      <button onclick="calculateResult()">=</button>
+      <button onclick="clearDisplay()">AC</button>
+    </div>
+    <div class="keys" id="calculator-keys-scientific">
+      <!-- Scientific Calculations -->
+      <button onclick="sin()">sin</button>
+      <button onclick="cos()">cos</button>
+      <button onclick="tan()">tan</button>
+      <button onclick="degrees()">Deg</button>
+      <button onclick="sinInv()">sin<sup>-1</sup></button>
+      <button onclick="cosInv()">cos<sup>-1</sup></button>
+      <button onclick="tanInv()">tan<sup>-1</sup></button>
+      <button onclick="pi()">π</button>
+      <button onclick="e()">e</button>
+      <button onclick="pow()">x<sup>y</sup></button>
+      <button onclick="cube()">x<sup>3</sup></button>
+      <button onclick="square()">x<sup>2</sup></button>
+      <button onclick="exp()">e<sup>x</sup></button>
+      <button onclick="tenPow()">10<sup>x</sup></button>
+      <button onclick="yRoot()">y√x</button>
+      <button onclick="cubeRoot()">3√x</button>
+      <button onclick="sqrt()">√x</button>
+      <button onclick="ln()">ln</button>
+
+      <button onclick="openBracket()"> ( </button>
+      <button onclick="closeBracket()"> ) </button>
+      <button onclick="log()">log</button>
+      <button onclick="reciprocal()">1/x</button>
+      <button onclick="factorial()">n!</button>
+      <button onclick="negate()">±</button>
+      <br>
+      <button onclick="calculateResult()">=</button>
+      <button onclick="clearDisplay()">AC</button>
+    </div>
+    <br>
+    <div class="tools">
+      <button onclick="toggleMode()"><i class="fas fa-exchange-alt"></i> Toggle Mode</button>
+      <button onclick="clearHistory()"><i class="fas fa-trash-alt"></i> Clear History</button>
+
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI/tTQ4A2uGcbqZ/6Cllh0kgXeltN5f/k76pVi8M=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
